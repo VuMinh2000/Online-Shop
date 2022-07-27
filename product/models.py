@@ -12,7 +12,7 @@ class Category(models.Model):
 class Product(models.Model):
     user = models.ForeignKey(user, on_delete=models.CASCADE)
     title = models.CharField(default='', max_length=75)
-    mataTitle = models.CharField(default='', max_length=100)
+    metaTitle = models.CharField(default='', max_length=100)
     slug = models.CharField(default='', max_length=100)
     summary = models.TextField(default='')
     Type = models.IntegerField
