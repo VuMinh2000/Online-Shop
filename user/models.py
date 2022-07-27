@@ -1,15 +1,12 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 
-class user(models.Model):
-    fistName = models.CharField(default='', max_length=50)
-    middleName = models.CharField(default='', max_length=50)
-    lastName = models.CharField(default='', max_length=50)
+class user(AbstractUser):
     mobile = models.CharField(default='', max_length=15)
-    email = models.CharField(default='', max_length=50)
     passwordHash = models.CharField(default='', max_length=32)
-    admin = models.IntegerField(max_length=1)
-    vendor = models.IntegerField(max_length=1)
+    admin = models.IntegerField
+    vendor = models.IntegerField
     registeredAt = models.DateTimeField(auto_now_add=True)
     lastLogin = models.DateTimeField(auto_now=True)
     intro = models.TextField

@@ -1,0 +1,87 @@
+{% extends 'homepage/base.html' %}
+{% load static %}
+
+  {% block cssblock %}
+<!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- font awesome style -->
+  <link href="{% static 'homepage/css/font-awesome.min.css' %}" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'homepage/css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'homepage/css/responsive.css' %}" rel="stylesheet" />
+  {% endblock %}
+
+{% block content %}
+  <!-- header section strats -->
+
+{% include 'homepage/header.html' %}
+
+  <!-- end header section -->
+  <!-- slider section -->
+
+{% include 'homepage/slider.html' %}
+
+  <!-- end slider section -->
+
+  <!-- offer section -->
+
+  {% include 'homepage/offer.html' %}
+
+  <!-- end offer section -->
+
+  <!-- product section -->
+
+{% include 'homepage/product.html' %}
+
+  <!-- end product section -->
+
+  <!-- about section -->
+
+{% include 'homepage/about.html' %}
+
+  <!-- end about section -->
+
+  <!-- blog section -->
+
+{% include 'homepage/blog.html' %}
+
+  <!-- end blog section -->
+
+  <!-- client section -->
+{% include 'homepage/client.html' %}
+  <!-- end client section -->
+
+  <!-- contact section -->
+{% include 'homepage/contact.html' %}
+  <!-- end contact section -->
+
+  <!-- info section -->
+
+{% include 'homepage/info.html' %}
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+{% include 'homepage/footer.html' %}
+  <!-- footer section -->
+{% endblock %}
+
+{% block jsblock %}
+  <!-- jQery -->
+  <script src="{% static 'homepage/js/jquery-3.4.1.min.js' %}"></script>
+  <!-- bootstrap js -->
+  <script src="{% static 'homepage/js/bootstrap.js' %}"></script>
+  <!-- custom js -->
+  <script src="{% static 'homepage/js/custom.js' %}"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+
+{% endblock %}
+

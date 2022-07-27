@@ -15,14 +15,14 @@ class Product(models.Model):
     mataTitle = models.CharField(default='', max_length=100)
     slug = models.CharField(default='', max_length=100)
     summary = models.TextField(default='')
-    Type = models.IntegerField(max_length=6)
+    Type = models.IntegerField
     sku = models.CharField(default='', max_length=100)
     price = models.FloatField
     discount = models.FloatField
     quantity = models.IntegerField
     shop = models.IntegerField
-    createAt = models.DateTimeField
-    updateAt = models.DateTimeField
+    createdAt = models.DateTimeField
+    updatedAt = models.DateTimeField
     publishedAt = models.DateTimeField
     startAt = models.DateTimeField
     endAt = models.DateTimeField
@@ -32,9 +32,9 @@ class Product(models.Model):
 class product_review(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     title = models.CharField(default='', max_length=100)
-    rating = models.IntegerField(max_length=6)
+    rating = models.IntegerField
     published = models.IntegerField
-    createAt = models.DateTimeField(auto_now_add=True)
+    createdAt = models.DateTimeField(auto_now_add=True)
     publishedAt = models.DateTimeField(auto_now=True)
     content = models.TextField
 

@@ -7,7 +7,7 @@ class cart(models.Model):
     user = models.ForeignKey(user, on_delete=models.CASCADE)
     sessionId = models.CharField(default='', max_length=100)
     token = models.CharField(default='', max_length=100)
-    status = models.IntegerField(max_length=6)
+    status = models.IntegerField
     fistName = models.CharField(default='', max_length=50)
     middleName = models.CharField(default='', max_length=50)
     lastName = models.CharField(default='', max_length=50)
@@ -18,8 +18,8 @@ class cart(models.Model):
     city = models.CharField(default='', max_length=50)
     province = models.CharField(default='', max_length=50)
     country = models.CharField(default='', max_length=50)
-    createAt = models.DateTimeField(auto_now_add=True)
-    updateAt = models.DateTimeField(auto_now=True)
+    createdAt = models.DateTimeField(auto_now_add=True)
+    updatedAt = models.DateTimeField(auto_now=True)
     content = models.TextField
 
 
@@ -29,10 +29,10 @@ class cart_item(models.Model):
     sku = models.CharField(default='', max_length=100)
     price = models.FloatField(default='')
     discount = models.FloatField(default='')
-    quantity = models.IntegerField(default='', max_length=6)
-    active = models.IntegerField(max_length=1)
-    createAt = models.DateTimeField(auto_now_add=True)
-    updateAt = models.DateTimeField(auto_now=True)
+    quantity = models.IntegerField
+    active = models.IntegerField
+    createdAt = models.DateTimeField(auto_now_add=True)
+    updatedAt = models.DateTimeField(auto_now=True)
     content = models.TextField(default='')
 
 
