@@ -60,3 +60,7 @@ class Tag(models.Model):
 class product_tag(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     tag = models.ForeignKey(Tag, on_delete=models.CASCADE)
+
+# class test
+
+

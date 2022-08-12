@@ -1,9 +1,5 @@
 from django.contrib import admin
-from .models import Category
-from .models import Product
-from .models import product_review
-from .models import product_meta
-from .models import Tag
+from .models import Product, Category, product_review, product_meta, Tag
 
 
 admin.site.register(Category)
