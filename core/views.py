@@ -3,6 +3,9 @@ from .forms import NewUserForm
 from django.views import View
 from django.contrib.auth import login
 from django.contrib import messages
+from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from .models import Contact
 
 
 class HomeView(View):
@@ -21,3 +24,7 @@ def register_request(request):
         messages.error(request, "Unsuccessful registration. Invalid information.")
     form = NewUserForm()
     return render(request=request, template_name="signinpage/index.html", context={"register_form": form})
+
+
+def signup_request(request):
+    return render(request, 'signinpage/signup.html')

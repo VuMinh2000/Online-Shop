@@ -4,5 +4,6 @@ from core import views
 
 urlpatterns = [
     path('', HomeView.as_view(), name='index'),
-    path('register', views.register_request, name='register')
+    path('register', views.register_request, name='register'),
+    path('signup', views.signup_request, name='signup')
 ]
